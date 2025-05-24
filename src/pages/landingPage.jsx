@@ -18,7 +18,7 @@ import chair from "../assets/chair.png";
 import house from "../assets/house.jpg";
 import flower from "../assets/flower.jpg";
 import living from "../assets/living.jpg";
-import dinning from "../assets/Dinning.jpg";
+import dinning from "../assets/dinning.jpg";
 import bed from "../assets/bed.jpg";
 import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
