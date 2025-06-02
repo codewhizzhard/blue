@@ -108,7 +108,7 @@ const LandingPage = () => {
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
                         <div className='flex md:gap-2  items-center gap-[2px]'>
                             <p className='text-[#E6B566]'>Explore</p> 
-                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
+                            <Link to="/clothings" ><FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
                         </div>
                     </div>
                 </div> 
@@ -121,7 +121,7 @@ const LandingPage = () => {
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
                         <div className='flex md:gap-2  items-center gap-[2px]'>
                             <p className='text-[#E6B566]'>Explore</p> 
-                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
+                           <Link to="interiors"><FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
                         </div>
                     </div>
                 </div> 
@@ -134,7 +134,7 @@ const LandingPage = () => {
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
                         <div className='flex md:gap-2  items-center gap-[2px]'>
                             <p className='text-[#E6B566]'>Explore</p> 
-                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
+                            <Link to="bespoke"><FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
                         </div>
                     </div>
                 </div> 
