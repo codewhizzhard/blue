@@ -107,8 +107,8 @@ const LandingPage = () => {
                      <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
                         <div className='flex md:gap-2  items-center gap-[2px]'>
-                            <p className='text-[#E6B566]'>Explore</p> 
-                            <Link to="/clothings" ><FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
+                            <Link to="/clothings" ><p className='text-[#E6B566]'>Explore</p> 
+                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
                         </div>
                     </div>
                 </div> 
@@ -120,8 +120,8 @@ const LandingPage = () => {
                      <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
                         <div className='flex md:gap-2  items-center gap-[2px]'>
-                            <p className='text-[#E6B566]'>Explore</p> 
-                           <Link to="interiors"><FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
+                           <Link to="interiors"> <p className='text-[#E6B566]'>Explore</p> 
+                           <FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
                         </div>
                     </div>
                 </div> 
@@ -133,8 +133,8 @@ const LandingPage = () => {
                     <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
                         <div className='flex md:gap-2  items-center gap-[2px]'>
-                            <p className='text-[#E6B566]'>Explore</p> 
-                            <Link to="bespoke"><FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
+                            <Link to="bespoke"><p className='text-[#E6B566]'>Explore</p> 
+                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
                         </div>
                     </div>
                 </div> 
