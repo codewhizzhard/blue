@@ -17,7 +17,7 @@ export const SignUp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await signin({email, password}).unwrap();
+            const result = await signin({email: email, password: password}).unwrap();
             console.log(result)
             if (result?.successful === true) {navigate("/login")}
         } catch (err) {
