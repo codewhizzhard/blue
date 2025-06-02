@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+7import React, { useState } from 'react'
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { Link, useNavigate} from 'react-router-dom';
 import { useSigninMutation } from '../services/blueBreedApi';
@@ -61,7 +61,7 @@ export const SignUp = () => {
             <button type="submit" className='w-full bg-[#E6B566] py-2 rounded text-white' >
                 Next
             </button>
-            <p>{error}</p>
+        
         </form>
         <div className='flex items-center gap-4'>
             <hr className='flex-grow'/>
