@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import {useNavigate} from "";
+import { useSigninMutation } from '../services/blueBreedApi';
+
 
 export const SignUp = () => {
 
@@ -9,8 +12,18 @@ export const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleSubmit = () => {
+    const [signin, {isloading, error}] = useSigninMutation();
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            const result = await signin({}).unwrap();
+            console.log(result)
+            if (result?.successful === true) navigate("/login);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
 
@@ -42,13 +55,14 @@ export const SignUp = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button onClick={() => setShowPassword(!showPassword)} className='absolute right-4 bottom-2'>{showPassword ? <FiEye size={23}  /> :  <FiEyeOff size={23} />}</button>
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className='absolute right-4 bottom-2'>{showPassword ? <FiEye size={23}  /> :  <FiEyeOff size={23} />}</button>
                 
             </div>
             <p className='mt-4'>By registering for an account, you are consenting to our <span className='underline decoration-0 text-[#E6B566]'>Terms of Service</span> and confirming that you have reviewed and accepted the <span className='text-[#E6B566]'>Global Privacy Statement.</span></p>
             <button type="submit" className='w-full bg-[#E6B566] py-2 rounded text-white' >
                 Next
             </button>
+            <p>{error}</p>
         </form>
         <div className='flex items-center gap-4'>
             <hr className='flex-grow'/>
