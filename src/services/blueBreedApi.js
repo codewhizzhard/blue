@@ -15,6 +15,13 @@ export const blueBreedApi = createApi({
                 body: credentials,
             }),
         }),
+        signin: builder.mutation({
+            query: (credentials) => ({
+                url: "/account/create",
+                method: "POST",
+                body: credentials,
+            }),
+        }),
         
 
         /* getPost: builder.query({query: () => "comments"}),
@@ -30,4 +37,4 @@ export const blueBreedApi = createApi({
     })
 })
 
-export const {useLoginMutation} = blueBreedApi;
+export const {useLoginMutation, useSigninMutation } = blueBreedApi;
