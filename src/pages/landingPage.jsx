@@ -106,10 +106,10 @@ const LandingPage = () => {
                  
                      <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
-                        <div className='flex md:gap-2  items-center gap-[2px]'>
-                            <Link to="/clothings" ><p className='text-[#E6B566]'>Explore</p> 
-                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
-                        </div>
+                        <Link to="/clothings"><div className='flex md:gap-2  items-center gap-[2px]'>
+                          <p className='text-[#E6B566]'>Explore</p> 
+                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
+                        </div> </Link>
                     </div>
                 </div> 
                 <div className='rounded-2xl bg-white pt-2 pb-4 flex flex-col gap-8 px-2'>
@@ -119,10 +119,10 @@ const LandingPage = () => {
                     </div>
                      <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
-                        <div className='flex md:gap-2  items-center gap-[2px]'>
-                           <Link to="interiors"> <p className='text-[#E6B566]'>Explore</p> 
-                           <FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
-                        </div>
+                        <Link to="interiors"><div className='flex md:gap-2  items-center gap-[2px]'>
+                            <p className='text-[#E6B566]'>Explore</p> 
+                           <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
+                        </div></Link>
                     </div>
                 </div> 
                 <div className='rounded-2xl bg-white pt-2 pb-4 flex flex-col gap-8 px-2'>
@@ -132,10 +132,10 @@ const LandingPage = () => {
                     </div>
                     <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
                         <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
-                        <div className='flex md:gap-2  items-center gap-[2px]'>
-                            <Link to="bespoke"><p className='text-[#E6B566]'>Explore</p> 
-                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/></Link>
-                        </div>
+                        <Link to="bespoke"><div className='flex md:gap-2  items-center gap-[2px]'>
+                            <p className='text-[#E6B566]'>Explore</p> 
+                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
+                        </div></Link>
                     </div>
                 </div> 
             </div>
