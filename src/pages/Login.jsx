@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLoginMutation } from '../services/blueBreedApi';
+import { useDispatch } from 'react-redux';
+import { setCredentials } from '../services/auth';
 
 const Login = () => {
 
@@ -9,22 +11,25 @@ const Login = () => {
       const [email, setEmail] = useState("");
       const [password, setPassword] = useState("");
 
+
       const [login, {isLoading, error}] = useLoginMutation();
 
       const navigate = useNavigate();
+      const dispatch = useDispatch();
   
       const handleLogin = async (e) => {
         console.log("loggings", isLoading)
         e.preventDefault();
         try {
           const result = await login({email: email, password: password}).unwrap();
-          console.log("logged", isLoading)
+          //localStorage.setItem(result?.data?.token);
+          dispatch(setCredentials(result.data));
           console.log("result",result);
           if (result.successful === true) {
             navigate('/clothings');
           }
         } catch (err) {
-          console.log("login err", err?.data.message);
+          console.log("login err", err?.data?.message);
         } finally {
           console.log("logs", isLoading)
         }
@@ -60,9 +65,10 @@ const Login = () => {
                 <button type='button'  onClick={() => setShowPassword(!showPassword)} className='absolute right-4 bottom-2'>{showPassword ? <FiEye size={23}  /> :  <FiEyeOff size={23} />}</button>
                 
             </div>
-            <button type="submit" className='w-full bg-[#E6B566] py-2 rounded text-white' >
-                Next
+            <button type="submit" className={`w-full bg-[#E6B566] py-2 rounded text-white ${isLoading && "bg-gray-600"}`} disabled={isLoading}>
+                {isLoading ? "Loading" : "Next"}
           </button>
+          {error?.data.message && <p className='text-red-500'>{error?.data.message}!</p>}
       </form>
       <div className='flex items-center gap-4'>
             <hr className='flex-grow'/>

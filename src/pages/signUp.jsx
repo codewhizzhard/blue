@@ -11,7 +11,7 @@ export const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const [signin, {isloading, error}] = useSigninMutation();
+    const [signin, {isLoading, error}] = useSigninMutation();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -21,7 +21,8 @@ export const SignUp = () => {
             console.log(result)
             if (result?.successful === true) {navigate("/login")}
         } catch (err) {
-            console.log(err);
+            console.log("err", err);
+            console.log("error", error)
         }
     }
 
@@ -33,6 +34,7 @@ export const SignUp = () => {
             <h2 className='font-bold text-3xl'>Sign up with BlueBreeds</h2>
             <span className='text-[#606060]'>Where Fashion Meets Interior Elegance</span>
         </div>
+        
         <form  className='space-y-3 text-[#606060]' onSubmit={handleSubmit}>
                 <div>
                 <label htmlFor="email">Email Address</label>
@@ -58,10 +60,10 @@ export const SignUp = () => {
                 
             </div>
             <p className='mt-4'>By registering for an account, you are consenting to our <span className='underline decoration-0 text-[#E6B566]'>Terms of Service</span> and confirming that you have reviewed and accepted the <span className='text-[#E6B566]'>Global Privacy Statement.</span></p>
-            <button type="submit" className='w-full bg-[#E6B566] py-2 rounded text-white' >
-                Next
+            <button type="submit" className={`w-full bg-[#E6B566] py-2 rounded text-white ${isLoading && "bg-gray-950"}`} >
+                {isLoading ? "Loading" : "Next"}
             </button>
-        
+        {error?.data.message && <p className='text-red-500'>{error?.data.message}!</p>}
         </form>
         <div className='flex items-center gap-4'>
             <hr className='flex-grow'/>

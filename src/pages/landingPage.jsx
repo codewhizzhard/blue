@@ -229,11 +229,11 @@ const LandingPage = () => {
                         <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex  justify-center items-end">
         
             <span className=" text-lg font-semibold p-4 bg-white text-black mr-1"> 
-            <p className='flex justify-center items-center gap-[6px]'>
+            <div className='flex justify-center items-center gadiv-[6px]'>
                 <span>01</span>
                 <hr className='flex-grow'/>
                 <span>Living Room</span>
-            </p>
+            </div>
             <b>Modern Elegance</b>
         </span>
         <div className=' bg-[#E6B566]'>
@@ -257,7 +257,7 @@ const LandingPage = () => {
            <div className='flex justify-between flex-col md:flex-row gap-6 mb-8'>
             
             <div className='bg-white px-[22px] py-[36px] rounded-2xl gap-3 flex flex-col pb-10 md:w-[25%]'>
-                 <div className='h-[58px] w-[58px]  rounded-2xl bg-[#E6B566] text-white justify-center flex items-center font-bold text-3xl'>0 1</div>
+                 <div className='h-[58px] w-[58px]  rounded-2xl bg-[#E6B566] text-white justify-center flex items-center font-bold text-3xl'>0 2</div>
                     <h2 className='font-semibold tracking-wide'>SHARE YOUR VISION</h2>
                     <p className='text-gray-500 font-normal text-sm'>Tell us what you want—send a sketch, photo, idea, or description.</p>
                 </div>
