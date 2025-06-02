@@ -19,7 +19,7 @@ export const SignUp = () => {
         try {
             const result = await signin({email, password}).unwrap();
             console.log(result)
-            if (result?.successful === true) {navigate("/login)};
+            if (result?.successful === true) {navigate("/login)}
         } catch (err) {
             console.log(err);
         }
