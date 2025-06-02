@@ -17,7 +17,7 @@ const Bespoke = () => {
 
             <div className='grid md:grid-cols-2 gap-10'>
                 <span className='order-2 md:order-1 relative'>
-                    <img src={bespoke} alt=""  className=' w-full h-[600px]'/>
+                    <img src={bespoke} alt=""  className=' w-full h-[600px] object-cover'/>
                     <p className='absolute bottom-2 right-2 bg-white px-6 py-2 text-[14px]'>Tailored To Perfection</p>
                 </span>
                 
@@ -34,7 +34,7 @@ const Bespoke = () => {
                     <button className='px-4 py-2 bg-[#E6B566] rounded text-white'>Create Your Own Design</button>
                 </span>
                  <span className='order-2 md:order-1 relative'>
-                    <img src={bespokePage} alt=""  className=' w-full h-[600px]'/>
+                    <img src={bespokePage} alt=""  className=' w-full h-[600px] object-cover'/>
                     <p className='absolute bottom-2 right-2 bg-white px-6 py-2 text-[14px]'>Tailored To Perfection</p>
                 </span>
                 

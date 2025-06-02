@@ -57,8 +57,9 @@ export const SignUp = () => {
         </div>
         
             <div className='border w-full text-center p-2 rounded'>Continue with Google</div>
-        <p className='text-center'>Already have an account?<button type="button" className='text-[#E6B566] pl-1'><Link to={"/login"}> Login </Link> </button></p>
-     
+       <p className='text-center'>Already have an account?<Link to={"/login"} className='text-[#E6B566] pl-1  relative'>Login</Link></p> 
+       
+
         </div>
         
     </section>

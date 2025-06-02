@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { blueBreedApi } from "./services/blueBreedApi";
 
-const store = configureStore({
+export const store = configureStore({
     reducer: {
         [blueBreedApi.reducerPath]: blueBreedApi.reducer,
     },

@@ -1,6 +1,6 @@
 import React from 'react'
 import reactt from "../assets/react.svg";
-import { FiArrowDownRight } from 'react-icons/fi';
+import { FiArrowRight } from 'react-icons/fi';
 import arrow from "../assets/arrowRight.png";
 import bespoke from "../assets/bespoke.png";
 import home from "../assets/home.png";
@@ -24,6 +24,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import "./landing.css"
 import { HiArrowNarrowRight } from 'react-icons/hi';
+//import "./landing.css"
+
 
 
 const LandingPage = () => {
@@ -81,12 +83,12 @@ const LandingPage = () => {
 
   return (
     <section className='w-full min-h-screen bg-[#FDF8EF]'>
-        <div className='w-full relative h-full'>
-           <img src={landed} alt="" srcSet="" className=' object-cover w-full h-[30rem] bg-red-200' />
+        <div className='w-full relative h-full bg-red-600'>
+           <img src={landed} alt="" srcSet="" className=' object-cover w-full h-[681px] md:h-[33rem]  bg-red-200' />{/*  */}
            <div className='absolute inset-0 flex justify-center flex-col text-white text-center gap-y-6 items-center px-2 md:px-10' style={{fontFamily: "'DM Sans',sans-serif"}}>
             <h2 className='font-semibold leading-[70px] text-6xl md:left-16 md:right-16'>Shop Fashion. Elevate Spaces. Customize with Elegance</h2>
             <p className='md:px-10 px-6'>Where Fashion Meets Interior Elegance – Shop, Style, and Personalize Your Space.</p>
-             <NavLink to={"/clothings"} className='rounded-2xl bg-white text-black text-sm font-semibold  md:w-[13%] md:h-[10%] flex justify-center items-center'>Start exploring</NavLink>{/* px-8 py-2 md:p-0 */}
+             <NavLink to={"/clothings"}><div className='rounded-2xl bg-white text-black text-sm font-semibold flex justify-center items-center py-2 px-8'> Start exploring</div> </NavLink>{/* px-8 py-2 md:p-0 */} {/* md:w-[13%] md:h-[10%] */}
            </div>
         </div>
 
@@ -98,41 +100,41 @@ const LandingPage = () => {
             <div className='flex flex-col flex-grow items-center gap-4 md:grid md:grid-cols-2 md:grid-rows-2'>
                 <div className='rounded-2xl bg-white pt-2 pb-4 flex flex-col gap-8 row-span-2 px-2'>
                     <div className='relative'>
-                        <img src={suit} alt="" className='h-[510px] object-cover bg-red-400 w-full rounded-2xl'/>
+                        <img src={suit} alt="" className='h-[510px] object-cover  w-full rounded-2xl'/>
                         <span className='absolute bottom-0 right-0 bg-[#E6B566] px-7 py-2 rounded-tl-3xl rounded-br-2xl text-white font-medium'>Clothing</span>
                     </div>
-                    <div className='flex flex-row pl-2 gap-2 items-center'>
-                        <p className='flex-grow'>BlueBreeds transforms your space with elegant and modern designs.</p>
-                        <div className='flex gap-2 w-30 items-center'>
+                 
+                     <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
+                        <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
+                        <div className='flex md:gap-2  items-center gap-[2px]'>
                             <p className='text-[#E6B566]'>Explore</p> 
-                            <img src={arrow} alt="" srcSet="" className='w-5 h-5' />
+                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
                         </div>
                     </div>
                 </div> 
                 <div className='rounded-2xl bg-white pt-2 pb-4 flex flex-col gap-8 px-2'>
                     <div className='relative'>
-                        <img src={homeIn} alt="" className='h-[200px] object-cover bg-red-400 w-full rounded-2xl'/>
+                        <img src={homeIn} alt="" className='h-[200px] object-cover  w-full rounded-2xl'/>
                         <span className='absolute bottom-0 right-0 bg-[#E6B566] px-7 py-2 rounded-tl-3xl rounded-br-2xl text-white font-medium'>Homes/Interior</span>
                     </div>
-                    <div className='flex flex-row pl-2 gap-2 items-center'>
-                        <p className='flex-grow'>BlueBreeds transforms your space with elegant and modern designs.</p>
-                        <div className='flex gap-2 w-30 items-center'>
+                     <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
+                        <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
+                        <div className='flex md:gap-2  items-center gap-[2px]'>
                             <p className='text-[#E6B566]'>Explore</p> 
-                            <img src={arrow} alt="" srcSet="" className='w-5 h-5' />
+                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
                         </div>
                     </div>
                 </div> 
                 <div className='rounded-2xl bg-white pt-2 pb-4 flex flex-col gap-8 px-2'>
                     <div className='relative'>
-                        <img src={bespoke} alt="" className='h-[200px] object-cover bg-red-400 w-full rounded-2xl'/>
+                        <img src={bespoke} alt="" className='h-[200px] object-cover w-full rounded-2xl'/>
                         <span className='absolute bottom-0 right-0 bg-[#E6B566] px-7 py-2 rounded-tl-3xl rounded-br-2xl text-white font-medium'>Bespoke</span>
                     </div>
-                    
-                    <div className='flex flex-row pl-2 gap-2 items-center'>
-                        <p className='flex-grow'>BlueBreeds transforms your space with elegant and modern designs.</p>
-                        <div className='flex gap-2 w-30 items-center'>
+                    <div className='flex flex-row pl-2  items-center  justify-between md:gap-4 gap-2'>
+                        <p className=' '>BlueBreeds transforms your space with elegant and modern designs.</p>
+                        <div className='flex md:gap-2  items-center gap-[2px]'>
                             <p className='text-[#E6B566]'>Explore</p> 
-                            <img src={arrow} alt="" srcSet="" className='w-5 h-5' />
+                            <FiArrowRight className='text-[#E6B566]' size={23} height={10}/>
                         </div>
                     </div>
                 </div> 
@@ -163,20 +165,20 @@ const LandingPage = () => {
         </div>
 
         <div className='columns-2 px-8 mt-10'>
-            <div className='relative break-inside-avoid mb-4'>
-                <img src={tailor} alt="" srcSet="" className='h-[500px] object-cover w-full'/>
+            <div className='relative break-inside-avoid mb-4 h-[500px]'>
+                <img src={tailor} alt="" srcSet="" className=' object-cover w-full h-full'/>{/*h-[500px]  */}
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Crafted with Intention</span>
             </div>
-            <div className='relative break-inside-avoid mb-4'>
-                <img src={trough} alt="" srcSet="" className='h-[820px] object-cover w-full'/>
+            <div className='relative break-inside-avoid mb-4 h-[820px]'>
+                <img src={trough} alt="" srcSet="" className='h-full object-cover w-full'/>
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Designs That Define Spaces</span>
             </div>
-            <div className='relative break-inside-avoid mb-4'>
-                <img src={wcop} alt="" srcSet="" className='h-[850px] object-cover w-full'/>
+            <div className='relative break-inside-avoid mb-4 h-[850px]'>
+                <img src={wcop} alt="" srcSet="" className='h-full object-cover w-full'/>
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Elegance in Every Stitch</span>
             </div>
-            <div className='relative break-inside-avoid mb-4'>
-                <img src={outside} alt="" srcSet="" className='h-[400px] object-cover w-full'/>
+            <div className='relative break-inside-avoid mb-4 h-[400px] '>
+                <img src={outside} alt="" srcSet="" className='object-cover w-full h-full'/>
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Confidence, Custom-Made</span>
             </div>
         </div>

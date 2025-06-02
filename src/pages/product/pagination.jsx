@@ -26,20 +26,44 @@ const PaginationPage = ({items, locate}) => {
 
   return (
     <div className='space-y-10'>
-      <ul className='grid md:grid-cols-3 gap-4 grid-cols-2 space-y-4'>
+   {/*  <ul className="flex flex-wrap gap-y-8 justify-between">
+  {currentItems.map((item, index) => (
+    <li
+      key={index}
+      className="flex flex-col gap-3 relative text-[#2E2E2E] w-[45%] sm:w-[45%] lg:w-[30%] max-w-[327px] shrink h-[322px] grow-0"
+    >
+      <Link to={`${locate}/${item.id}`} className="block h-full">
+        <img
+          src={bespoke}
+          alt=""
+          className="w-full object-cover object-center rounded h-[232px]"
+        />
+        </Link>
+        <span className='font-medium text-black text-[16px]'>{item.name}</span>
+        <span className='font-medium text-black text-[16px]'>{item.price}</span>
+        <span className="absolute bg-white right-2 top-2 rounded-4xl p-2">
+          <FiShoppingCart size={13} />
+        </span>
+     
+    </li>
+  ))}
+</ul> */}
+
+          <ul className='grid md:grid-cols-3 gap-4 grid-cols-2 space-y-4'>
         {
           currentItems.map((item, index) => (
              <Link to={`${locate}/${item.id}`}>
             <li className='w-fit shrink-0 flex flex-col h-[310px] gap-3 relative text-[#2E2E2E]' key={index}>{/* max-w-[320px] */}
-              <img src={bespoke} alt="" className='w-full object-center rounded h-full'/>
-                <span>{item.name}</span>
-                <span>{item.price}</span>
+              <img src={bespoke} alt="" className='w-full object-cover rounded h-full'/>
+                <span className='font-medium text-black text-[16px]'>{item.name}</span>
+                <span className='font-medium text-black text-[16px]'>{item.price}</span>
                <span className='absolute bg-white right-2 top-2 rounded-4xl p-2'><FiShoppingCart  size={13} /></span>
               </li>
             </Link>
           ))
         }
         </ul>
+
       
       <div className='flex justify-center gap-4 pt-4'>
         <button onClick={handlePrevPage} className='p-2 bg-[#E6B566] rounded'>
@@ -55,3 +79,5 @@ const PaginationPage = ({items, locate}) => {
 }
 
 export default PaginationPage
+
+/*  */

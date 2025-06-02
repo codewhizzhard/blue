@@ -1,5 +1,6 @@
 import React from 'react'
-import { FiMail } from 'react-icons/fi'
+import { FaHeadset } from 'react-icons/fa'
+import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi'
 
 const Contact = () => {
   return (
@@ -32,12 +33,12 @@ const Contact = () => {
                 <a href="mailto:email@company.com" className='flex flex-col'> <span className='text-[#6B7280]'>Email</span> email@company.com</a>
             </div>
             <div className='w-full border h-[88px] flex items-center gap-5 pl-5 rounded-[15px] border-[#EDEFF2]'>
-                <FiMail className='bg-[#FFFBEF] p-3 text-[#E6B566] rounded-[100%]' size={45} />
-                <a href="mailto:email@company.com" className='flex flex-col'> <span className='text-[#6B7280]'>Email</span> email@company.com</a>
+                <FaHeadset className='bg-[#FFFBEF] p-3 text-[#E6B566] rounded-[100%]' size={45} />
+                <a href="" className='flex flex-col'> <span className='text-[#6B7280]'>Phone</span>(+1) 1234 567 891</a>
             </div>
             <div className='w-full border h-[88px] flex items-center gap-5 pl-5 rounded-[15px] border-[#EDEFF2]'>
-                <FiMail className='bg-[#FFFBEF] p-3 text-[#E6B566] rounded-[100%]' size={45} />
-                <a href="mailto:email@company.com" className='flex flex-col'> <span className='text-[#6B7280]'>Email</span> email@company.com</a>
+                <FiMapPin className='bg-[#FFFBEF] p-3 text-[#E6B566] rounded-[100%]' size={45} />
+                <a href="" className='flex flex-col'> <span className='text-[#6B7280]'>Address</span>760 Market St Floor 10, San Francisco, CA 94102, USA</a>
             </div>
             
         </div>

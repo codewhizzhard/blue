@@ -64,7 +64,7 @@ const ProductCart = ({items}) => {
 
 
   return (
-    <div className="flex flex-col gap-4 p-6 min-h-screen md:flex-row pb-24">
+    <div className="flex flex-col gap-8 pt-6 px-0 min-h-screen md:flex-row pb-24">
       
       <div className=" md:w-[246px] w-full text-[#4A4A4A]">{/* w-full md:w-1/3 */}
         
@@ -78,7 +78,7 @@ const ProductCart = ({items}) => {
                 type="checkbox"
                 checked={checkedBoxes[box] || false}
                 onChange={() => handleChecked(box)}
-                className='accent-[#E6B566]'
+                className='accent-[#E6B566] w-4 h-4'
               />
               <span>{box}</span>
             </label>
@@ -106,6 +106,7 @@ const ProductCart = ({items}) => {
                 type="checkbox"
                 checked={priceBoxes[box] || false}
                 onChange={() => handlePriceChecked(box)}
+                className='w-4 h-4 accent-[#E6B566]'
               />
               <span>{box.toUpperCase()}</span>
             </label>
@@ -119,11 +120,11 @@ const ProductCart = ({items}) => {
         <h2 className="text-lg font-semibold">Products will be displayed here...</h2>
         /* You can map through filtered products here based on checked filters       </div> */}
       <div className='flex-grow space-y-2'>
-          <div className='flex justify-between'>
+          <div className='flex justify-start flex-col md:flex-row md:justify-between space-y-5'>
           <h2 className='text-[32px] font-semibold'>PRODUCTS</h2>
-          <button className='px-4 py-2 bg-[#E6B566] rounded text-white'>Create Your Own Design</button>
-          </div>       
-        <div>
+          <button className='h-[46px] bg-[#E6B566] rounded text-white w-[281px]'>Create Your Own Design</button>
+          </div>      
+       <div className='w-full p-0 pt-4'>
           <PaginationPage items={items} locate={location.pathname}/>
         </div>
       </div>

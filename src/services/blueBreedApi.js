@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const API = "https://";
+const API = "https://blueproject-1.onrender.com/api/v1/bluebreed";
 
 export const blueBreedApi = createApi({
     reducerPath: "blueBreedApi",
@@ -8,7 +8,16 @@ export const blueBreedApi = createApi({
         baseUrl: API,
     }),
     endpoints: (builder) => ({
-        getPost: builder.query({query: () => "comments"}),
+        login: builder.mutation({
+            query: (credentials) => ({
+                url: "/account/login",
+                method: "POST",
+                body: credentials,
+            }),
+        }),
+        
+
+        /* getPost: builder.query({query: () => "comments"}),
         getPosts: builder.query({query: (id) => `post/${id}`}),
         createPost: builder.mutation({
             query: (newPost) => ({
@@ -17,8 +26,8 @@ export const blueBreedApi = createApi({
                 body: newPost,
             })
         })
-
+ */
     })
 })
 
-export const {useGetPostQuery, useCreatePostMutation, useCreatePostsMutation} = blueBreedApi;
+export const {useLoginMutation} = blueBreedApi;
