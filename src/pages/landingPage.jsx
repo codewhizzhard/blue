@@ -209,7 +209,7 @@ const LandingPage = () => {
             <div className='space-y-5 text-center md:text-start md:w-[40%]'>
                 <h2 className='font-semibold text-4xl'>100+ Stunning Home Designs</h2>
                 <p>Our interior designers have crafted beautiful spaces to inspire your next home transformation</p>
-                <button className='bg-[#E6B566] py-2 px-6'>Explore More</button>
+                <Link to="/interiors" className='bg-[#E6B566] py-2 px-6'>Explore More</Link>
             </div>
 
             <div className='h-[410px] md:w-[70%] w-[100%]'>
