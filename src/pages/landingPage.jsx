@@ -229,11 +229,11 @@ const LandingPage = () => {
                     <span>Bedroom</span>
                 </div>
             </div> */}
-            <div className='flex gap-8 items-end relative md:static py-3'>
+            <div className='flex gap-8 items-end relative md:static '>
                 <div className='md:w-[68%] w-full'>
                 <img src={interiors} alt="" className='w-full md:rounded-r-[24px] h-[568px] object-cover'/>
                 </div>
-                <div className='md:w-[25%] w-[90%] md:rounded-[24px] bg-black h-[229px] md:h-[400px] absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:py-30'>
+                <div className='md:w-[25%] w-[80%] md:rounded-[24px] bg-black h-fit py-5 md:h-[400px] absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:py-30'>
                     <p className='text-[28px] font-semibold'>Crafted Beautiful Spaces To Inspire Your Next Home Transformation</p>
                     <button className='px-7 py-3 bg-[#E6B566] text-[18px] font-bold rounded-[40px]'>Shop Collection</button>
                 </div>
