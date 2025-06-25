@@ -229,7 +229,7 @@ const LandingPage = () => {
                     <span>Bedroom</span>
                 </div>
             </div> */}
-            <div className='flex gap-8 items-end relative md:static md:pb-10 pb-50'>
+            <div className='flex gap-8 items-end relative md:static md:pb-10 pb-50 bg-red-400'>
                 <div className='md:w-[68%] w-full'>
                 <img src={interiors} alt="" className='w-full md:rounded-r-[24px] h-[568px] object-cover'/>
                 </div>
