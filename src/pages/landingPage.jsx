@@ -233,7 +233,7 @@ const LandingPage = () => {
                 <div className='md:w-[68%] w-full'>
                 <img src={interiors} alt="" className='w-full md:rounded-r-[24px] h-[568px] object-cover'/>
                 </div>
-                <div className='md:w-[25%] w-[88%] md:rounded-[24px] bg-black h-fit py-5 md:h-[400px] absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:flex-end md:pb-6 md:flex md:flex-col'>
+                <div className='md:w-[25%] w-[88%] md:rounded-[24px] bg-black h-fit py-5 md:pt-20 h-fit absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:flex-end md:pb-6 md:flex md:flex-col'>
                     <p className='text-[28px] font-semibold break-words'>Crafted Beautiful Spaces To Inspire Your Next Home Transformation</p>
                     <button className='px-7 py-3 bg-[#E6B566] text-[18px] font-bold rounded-[40px]'>Shop Collection</button>
                 </div>
