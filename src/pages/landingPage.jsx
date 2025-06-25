@@ -184,7 +184,7 @@ const LandingPage = () => {
                 <button className='text-[18px] font-bold px-7  max-w-[172px] bg-[#E6B566] text-white #E6B566md:rounded-[0px]'>Explore Now</button>
             </span> */}
             <div className='flex flex-col md:flex-row justify-between md:items-center space-y-8'>
-                <h2 className='text-[40px] font-semibold md:w-[65%]'>Custom fashion and interior solutions tailored just for you.</h2>
+                <h2 className='text-[40px] font-semibold md:w-[65%] leading-none'>Custom fashion and interior solutions tailored just for you.</h2>
                 <button className='w-[172px] bg-[#E6B566] font-bold text-[18px] py-3 md:rounded-[0px] rounded-[39px]'>Explore Now</button>
             </div>
             
