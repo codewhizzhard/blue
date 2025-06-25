@@ -178,7 +178,7 @@ const LandingPage = () => {
             </div>
         </div>
 
-        <div className='w-full flex flex-col px-10 mt-10 md:px-18 space-y-9'>
+        <div className='w-full flex flex-col px-10 mt-10 md:px-18 space-y-9 pb-10'>
             {/* <span className='flex justify-between  flex-col md:flex-row w-full md:items-center'>
                 <h2 className='text-[40px] font-semibold md:w-[60%] text-black md:w-[100%]'> Custom fashion and interior solutions tailored just for you.</h2>
                 <button className='text-[18px] font-bold px-7  max-w-[172px] bg-[#E6B566] text-white #E6B566md:rounded-[0px]'>Explore Now</button>
@@ -229,11 +229,11 @@ const LandingPage = () => {
                     <span>Bedroom</span>
                 </div>
             </div> */}
-            <div className='flex gap-8 items-end relative md:static'>
+            <div className='flex gap-8 items-end relative md:static py-3'>
                 <div className='md:w-[68%] w-full'>
                 <img src={interiors} alt="" className='w-full md:rounded-r-[24px] h-[568px] object-cover'/>
                 </div>
-                <div className='md:w-[25%] w-[90%] md:rounded-[24px] bg-black h-[229px] md:h-[400px] absolute md:static top-120 left-10 text-white px-6 space-y-8 py-4 md:py-30'>
+                <div className='md:w-[25%] w-[90%] md:rounded-[24px] bg-black h-[229px] md:h-[400px] absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:py-30'>
                     <p className='text-[28px] font-semibold'>Crafted Beautiful Spaces To Inspire Your Next Home Transformation</p>
                     <button className='px-7 py-3 bg-[#E6B566] text-[18px] font-bold rounded-[40px]'>Shop Collection</button>
                 </div>
