@@ -229,7 +229,7 @@ const LandingPage = () => {
                     <span>Bedroom</span>
                 </div>
             </div> */}
-            <div className='flex gap-8 items-end relative md:static md:pb-10 pb-20 bg-red-400'>
+            <div className='flex gap-8 items-end relative md:static md:pb-10 pb-5'>
                 <div className='md:w-[68%] w-full'>
                 <img src={interiors} alt="" className='w-full md:rounded-r-[24px] h-[568px] object-cover'/>
                 </div>
@@ -241,7 +241,7 @@ const LandingPage = () => {
             
         </div>
 
-        <div className='bg-black flex md:flex-row flex-col text-white px-8 md:pt-20 pt-10 pb-10 justify-center items-center gap-8 bg-blue-600'>
+        <div className='bg-black flex md:flex-row flex-col text-white px-8 md:pt-20 pt-10 pb-10 justify-center items-center gap-8'>
 
             <div className='space-y-5 text-center md:text-start md:w-[40%]'>
                 <h2 className='font-semibold text-4xl'>100+ Stunning Home Designs</h2>
