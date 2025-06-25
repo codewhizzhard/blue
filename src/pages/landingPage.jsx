@@ -9,7 +9,7 @@ import homeIn from "../assets/homeIn.png";
 import fsit from "../assets/fsit.jpg";
 import fcop from "../assets/fcop.jpg";
 import fswag from "../assets/fswag.jpg";
-import suit from "../assets/suitt.png";
+/* import suit from "../assets/suitt.png"; */
 import trough from "../assets/trough.png";
 import wcop from "../assets/wcop.png";
 import tailor from "../assets/tailor.png";
@@ -20,6 +20,9 @@ import flower from "../assets/flower.jpg";
 import living from "../assets/living.jpg";
 import dinning from "../assets/dinning.jpg";
 import bed from "../assets/bed.jpg";
+import jacket from "../assets/jacket.png";
+import interiors from "../assets/interiors.png";
+import suit from "../assets/suit.png";
 import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import "./landing.css"
@@ -92,7 +95,7 @@ const LandingPage = () => {
            </div>
         </div>
 
-        <div className='w-full  flex-col md:pt-20 px-8 pt-10 pb-20' style={{fontFamily: "'Cal Sans',sans-serif"}}>
+        {/* <div className='w-full  flex-col md:pt-20 px-8 pt-10 pb-20' style={{fontFamily: "'Cal Sans',sans-serif"}}>
             <span className='flex md:items-center text-[#E6B566] gap-4 flex-col md:flex-row pb-2'>
                 <h2 className='text-black text-lg'>About Us</h2>
                 <hr className='md:flex-grow'/>
@@ -139,16 +142,27 @@ const LandingPage = () => {
                     </div>
                 </div> 
             </div>
+        </div> */}
+
+        <div className='w-full md:flex md:pt-20 pt-10 pb-20 bg-white relative px-6 md:px-0 '>
+            <div className='w-full '>
+                <img src={jacket} alt="" className='object-cover w-full rounded-[11px] md:rounded-[0px]'/>
+            </div>
+            <div className='w-full md:block hidden'>
+                <img src={suit} alt="" className='object-cover'/>
+            </div>
+            <div className='absolute inset-0 flex flex-col justify-center items-center gap-7 w-full'>
+                <p className='md:text-[40px] text-[32px]  font-medium text-white w-[50%] text-center'>Premium Casual And Formal Wear.</p>
+                <button type='button' className='px-8 py-4 text-[15px] font-semibold border-[3px] border-white rounded-[39px] text-white'>Shop collections</button>
+            </div>
         </div>
 
-        
-
-        <div className='h-full px-8 bg-white md:pt-20 pt-10 pb-10 w-full' style={{fontFamily: "'Cal Sans',sans-serif"}}>
-            <span className='flex md:items-center text-[#E6B566] gap-4 flex-col md:flex-row pb-12'>
-                <h2 className='text-black text-lg'>Explore our Fashion collections</h2>
+        <div className='h-full md:px-16  bg-white md:pt-20 pt-10 pb-10 w-full' style={{fontFamily: "'Cal Sans',sans-serif"}}>
+            <span className='flex md:items-center text-[#E6B566] gap-4 flex-col md:flex-row pb-12 px-10 md:px-0'>
+                <h2 className='text-black text-[33.99px] font-semibold'>Explore our Fashion collections</h2>
                 <hr className='md:flex-grow'/>
             </span>
-            <div className='flex md:flex-row gap-4 md:justify-center items-center overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-align-none'>
+            <div className='flex md:flex-row gap-4 md:justify-center items-center overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-align-none px-10'>
                 <div className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center'>
                     <img src={fswag} alt="" className='h-[460px] object-cover rounded-2xl w-full'/>
                     <span>Sport Wear</span>
@@ -164,31 +178,44 @@ const LandingPage = () => {
             </div>
         </div>
 
-        <div className='columns-2 px-8 mt-10'>
+        <div className='w-full flex flex-col px-10 mt-10 md:px-18 space-y-9'>
+            {/* <span className='flex justify-between  flex-col md:flex-row w-full md:items-center'>
+                <h2 className='text-[40px] font-semibold md:w-[60%] text-black md:w-[100%]'> Custom fashion and interior solutions tailored just for you.</h2>
+                <button className='text-[18px] font-bold px-7  max-w-[172px] bg-[#E6B566] text-white #E6B566md:rounded-[0px]'>Explore Now</button>
+            </span> */}
+            <div className='flex flex-col md:flex-row justify-between md:items-center space-y-8'>
+                <h2 className='text-[40px] font-semibold md:w-[65%]'>Custom fashion and interior solutions tailored just for you.</h2>
+                <button className='w-[172px] bg-[#E6B566] font-bold text-[18px] py-3 md:rounded-[0px] rounded-[39px]'>Explore Now</button>
+            </div>
+            
+            <div className='columns-2 '>
             <div className='relative break-inside-avoid mb-4 h-[500px]'>
-                <img src={tailor} alt="" srcSet="" className=' object-cover w-full h-full'/>{/*h-[500px]  */}
+                <img src={tailor} alt="" srcSet="" className=' object-cover w-full h-full rounded-[7px] md:rounded-[12px]'/>{/*h-[500px]  */}
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Crafted with Intention</span>
             </div>
             <div className='relative break-inside-avoid mb-4 h-[820px]'>
-                <img src={trough} alt="" srcSet="" className='h-full object-cover w-full'/>
+                <img src={trough} alt="" srcSet="" className='h-full object-cover w-full rounded-[7px] md:rounded-[12px]'/>
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Designs That Define Spaces</span>
             </div>
             <div className='relative break-inside-avoid mb-4 h-[850px]'>
-                <img src={wcop} alt="" srcSet="" className='h-full object-cover w-full'/>
+                <img src={wcop} alt="" srcSet="" className='h-full object-cover w-full rounded-[7px] md:rounded-[12px]'/>
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Elegance in Every Stitch</span>
             </div>
             <div className='relative break-inside-avoid mb-4 h-[400px] '>
-                <img src={outside} alt="" srcSet="" className='object-cover w-full h-full'/>
+                <img src={outside} alt="" srcSet="" className='object-cover w-full h-full rounded-[7px] md:rounded-[12px]'/>
                 <span className='absolute sm:right-3 sm:bottom-3 sm:px-4 sm:py-2 bg-white bottom-1 right-1  p-2 w-[80%] sm:w-fit'>Confidence, Custom-Made</span>
             </div>
         </div>
+        </div>
+        
 
-        <div className='h-full px-8 bg-white md:pt-20 pt-10 pb-10 w-full' style={{fontFamily: "'Cal Sans',sans-serif"}}>
-            <span className='flex md:items-center text-[#E6B566] gap-4 flex-col md:flex-row pb-12'>
-                <h2 className='text-black text-lg'>Explore our Interior collections</h2>
-                <hr className='md:flex-grow'/>
-            </span>
-            <div className='flex md:flex-row gap-4 md:justify-center items-center overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-align-none'>
+        <div className='h-full bg-white md:pr-6 w-full md:flex md:flex-col space-y-9 md:pt-20 pt-10 pb-50 md:pb-20 sm:relative md:static' style={{fontFamily: "'Cal Sans',sans-serif"}}>{/* md:pt-20 pt-10 pb-10 */}
+            {/* <span className='flex md:items-center text-[#E6B566] gap-4 flex-col md:flex-row pb-12'>
+                
+            </span> */}
+            <h2 className='text-black text-[40px] font-semibold text-center'>Explore Our Interiors</h2>
+                
+           {/*  <div className='flex md:flex-row gap-4 md:justify-center items-center overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-align-none'>
                 <div className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center'>
                     <img src={living} alt="" className='h-[460px] object-cover rounded-2xl'/>
                     <span>Living Room</span>
@@ -201,7 +228,17 @@ const LandingPage = () => {
                     <img src={bed} alt="" className='h-[460px] object-cover rounded-2xl'/>
                     <span>Bedroom</span>
                 </div>
+            </div> */}
+            <div className='flex gap-8 items-end relative md:static'>
+                <div className='md:w-[68%] w-full'>
+                <img src={interiors} alt="" className='w-full md:rounded-r-[24px] h-[568px] object-cover'/>
+                </div>
+                <div className='md:w-[25%] w-[90%] md:rounded-[24px] bg-black h-[229px] md:h-[400px] absolute md:static top-120 left-10 text-white px-6 space-y-8 py-4 md:py-30'>
+                    <p className='text-[28px] font-semibold'>Crafted Beautiful Spaces To Inspire Your Next Home Transformation</p>
+                    <button className='px-7 py-3 bg-[#E6B566] text-[18px] font-bold rounded-[40px]'>Shop Collection</button>
+                </div>
             </div>
+            
         </div>
 
         <div className='bg-black flex md:flex-row flex-col text-white px-8 md:pt-20 pt-10 pb-10 justify-center items-center gap-8 '>
@@ -248,7 +285,7 @@ const LandingPage = () => {
 
           
         </div>
-
+{/* 
         <div className='h-full px-8 md:pt-20 pt-10 pb-10 w-full' style={{fontFamily: "'Cal Sans',sans-serif"}}>
             <span className='flex md:items-center text-[#E6B566] gap-4 flex-col md:flex-row pb-12'>
                 <h2 className='text-black text-lg'>Tailored Just for You</h2>
@@ -281,7 +318,7 @@ const LandingPage = () => {
            <div className='flex justify-center'>
                 <button className='text-center px-16 py-4 border border-[#E6B566] text-[#E6B566]'>Start Your Design Journey</button>
            </div>
-        </div>
+        </div> */}
 
     </section>
   )
