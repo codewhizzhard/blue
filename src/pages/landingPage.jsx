@@ -86,7 +86,7 @@ const LandingPage = () => {
 
   return (
     <section className='w-full min-h-screen bg-[#FDF8EF]'>
-        <div className='w-full relative h-full bg-red-600'>
+        <div className='w-full relative h-full'>
            <img src={landed} alt="" srcSet="" className=' object-cover w-full h-[681px] md:h-[33rem]  bg-red-200' />{/*  */}
            <div className='absolute inset-0 flex justify-center flex-col text-white text-center gap-y-6 items-center px-2 md:px-10' style={{fontFamily: "'DM Sans',sans-serif"}}>
             <h2 className='font-semibold leading-[70px] text-6xl md:left-16 md:right-16'>Shop Fashion. Elevate Spaces. Customize with Elegance</h2>
@@ -184,7 +184,7 @@ const LandingPage = () => {
                 <button className='text-[18px] font-bold px-7  max-w-[172px] bg-[#E6B566] text-white #E6B566md:rounded-[0px]'>Explore Now</button>
             </span> */}
             <div className='flex flex-col md:flex-row justify-between md:items-center space-y-8'>
-                <h2 className='text-[40px] font-semibold md:w-[65%] leading-none'>Custom fashion and interior solutions tailored just for you.</h2>
+                <h2 className='text-[40px] font-semibold md:w-[65%] leading-snug'>Custom fashion and interior solutions tailored just for you.</h2>
                 <button className='w-[172px] bg-[#E6B566] font-bold text-[18px] py-3 md:rounded-[0px] rounded-[39px]'>Explore Now</button>
             </div>
             
