@@ -145,11 +145,11 @@ const LandingPage = () => {
         </div> */}
 
         <div className='w-full md:flex md:pt-20 pt-10 pb-20 bg-white relative px-6 md:px-0 '>
-            <div className='w-full '>
-                <img src={jacket} alt="" className='object-cover w-full rounded-[11px] md:rounded-[0px]'/>
+            <div className='w-full h-full'>
+                <img src={jacket} alt="" className='object-cover w-full rounded-[11px] md:rounded-[0px] h-full'/>
             </div>
-            <div className='w-full md:block hidden'>
-                <img src={suit} alt="" className='object-cover'/>
+            <div className='w-full md:block hidden h-full'>
+                <img src={suit} alt="" className='object-cover w-full h-full'/>
             </div>
             <div className='absolute inset-0 flex flex-col justify-center items-center gap-7 w-full'>
                 <p className='md:text-[40px] text-[32px]  font-medium text-white w-[50%] text-center'>Premium Casual And Formal Wear.</p>
