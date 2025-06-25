@@ -229,11 +229,11 @@ const LandingPage = () => {
                     <span>Bedroom</span>
                 </div>
             </div> */}
-            <div className='flex gap-8 items-end relative md:static md:pb-10 pb-50 bg-red-400'>
+            <div className='flex gap-8 items-end relative md:static md:pb-10 pb-40 bg-red-400'>
                 <div className='md:w-[68%] w-full'>
                 <img src={interiors} alt="" className='w-full md:rounded-r-[24px] h-[568px] object-cover'/>
                 </div>
-                <div className='md:w-[25%] w-[80%] md:rounded-[24px] bg-black h-fit py-5 md:h-[400px] absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:py-30'>
+                <div className='md:w-[25%] w-[88%] md:rounded-[24px] bg-black h-fit py-5 md:h-[400px] absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:py-30'>
                     <p className='text-[28px] font-semibold'>Crafted Beautiful Spaces To Inspire Your Next Home Transformation</p>
                     <button className='px-7 py-3 bg-[#E6B566] text-[18px] font-bold rounded-[40px]'>Shop Collection</button>
                 </div>
@@ -241,7 +241,7 @@ const LandingPage = () => {
             
         </div>
 
-        <div className='bg-black flex md:flex-row flex-col text-white px-8 md:pt-20 pt-10 pb-10 justify-center items-center gap-8 '>
+        <div className='bg-black flex md:flex-row flex-col text-white px-8 md:pt-20 pt-10 pb-10 justify-center items-center gap-8 bg-blue-600'>
 
             <div className='space-y-5 text-center md:text-start md:w-[40%]'>
                 <h2 className='font-semibold text-4xl'>100+ Stunning Home Designs</h2>
