@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from "./img/logo.png";
 import user from "./img/user.png";
-import { FiArrowDown, FiArrowDownLeft, FiArrowLeftCircle, FiArrowRight, FiArrowRightCircle, FiSearch, FiX } from 'react-icons/fi';
+import { FiArrowDown, FiArrowUp, FiArrowDownLeft, FiArrowLeftCircle, FiArrowRight, FiArrowRightCircle, FiSearch, FiX } from 'react-icons/fi';
 import { FiShoppingCart, FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
