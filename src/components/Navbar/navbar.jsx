@@ -94,7 +94,7 @@ const Navbar = () => {
         <ul className='flex flex-col text-[16px] font-semibold  text-[#192F1E] space-y-10 pb-5'>
         {/* <Link to={"/clothings"} onClick={() => setMobile(false)} className=''> */}
         <li className='flex flex-col gap-4 cursor-pointer'>
-          <div className='flex justify-between'><div>Clothings</div> <FiArrowDown className='w-6 h-5' onClick={handleShowMenu}/></div>
+          <div className='flex justify-between'><div>Clothings</div> {showMenu ? <FiArrowUp className='w-6 h-5' onClick={handleShowMenu}/> : <FiArrowDown className='w-6 h-5' onClick={handleShowMenu}/></div>
           {showMenu && (
             <div className="flex flex-col gap-4 pl-4 text-gray-400 cursor-pointer">
               <Link to={"/clothings/men"}  onClick={() => setMobile(false)} className=''><div className='hover:text-black'>Men's Wear</div></Link>
