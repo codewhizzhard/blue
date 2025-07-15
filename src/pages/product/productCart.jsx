@@ -15,7 +15,7 @@ const ProductCart = ({items}) => {
 
   // Set filters based on the current page
   useEffect(() => {
-    if (location.pathname === "/clothings") {
+    if (location.pathname.includes("/clothings"))  {
       setLocateBoxes(clothingsBoxes);
     } else if (location.pathname === "/interiors") {
       setLocateBoxes(interiorsBoxes);
@@ -59,7 +59,7 @@ const ProductCart = ({items}) => {
   };
 
   useEffect(() => {
-  console.log("rr:", priceBoxes);
+  //console.log("rr:", priceBoxes);
 }, [priceBoxes]);
 
 

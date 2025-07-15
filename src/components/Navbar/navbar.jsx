@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from "./img/logo.png";
 import user from "./img/user.png";
-import { FiSearch, FiX } from 'react-icons/fi';
+import { FiArrowDown, FiArrowDownLeft, FiArrowLeftCircle, FiArrowRight, FiArrowRightCircle, FiSearch, FiX } from 'react-icons/fi';
 import { FiShoppingCart, FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
@@ -9,13 +9,18 @@ const Navbar = () => {
 
   const [search, setSearch] = useState("");
   const [mobile, setMobile] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleShowMenu = () => {
+    setShowMenu((prev) => !prev)
+  }
 
   const handleSearch = () => {
     console.log("search", search);
   }
   return (
     <>
-  {/* Web view */}
+  { /* Web view */}
     <nav className='  justify-start items-center border-b border-gray-200 bg-white px-9 fixed top-0 z-50 w-full gap-6 sm:hidden md:flex' style={{fontFamily: "'DM Sans',sans-serif"}}>
          <Link to={"/"}><img src={logo} alt="bluebreedSelect" srcset="" className='w-23 h-20 md:block hidden'/></Link> {/* w-23 h-20 */}
 
@@ -70,9 +75,9 @@ const Navbar = () => {
       {/* The  part that toggles to link to sub pages*/}
       {/* must be layerd like tis to avoid overlapping of elements */}
       {mobile && (
-      <div className='flex md:hidden fixed z-40  w-full flex-col h-full'>
+      <div className='flex md:hidden fixed z-40 w-full flex-col min-h-full h-screen overflow-y-auto pb-10'>
      
-        <div className='h-full flex-grow flex flex-col px-9 bg-white pt-10 space-y-10'>
+        <div className='h-full flex-grow flex flex-col px-9 bg-white pt-10 space-y-12'>
 
         <div className='flex items-center rounded-[42px] py-2 border px-4 gap-2 bg-white'>
       <input
@@ -86,23 +91,36 @@ const Navbar = () => {
       <FiSearch onClick={handleSearch} className="cursor-pointer" />
      
         </div>
-        <ul className='flex flex-col text-[16px] font-semibold  text-[#192F1E] space-y-12 pb-10'>
-        <Link to={"/clothings"} onClick={() => setMobile(false)}><li>Clothings</li></Link> 
+        <ul className='flex flex-col text-[16px] font-semibold  text-[#192F1E] space-y-10 pb-5'>
+        {/* <Link to={"/clothings"} onClick={() => setMobile(false)} className=''> */}
+        <li className='flex flex-col gap-4 cursor-pointer'>
+          <div className='flex justify-between'><div>Clothings</div> <FiArrowDown className='w-6 h-5' onClick={handleShowMenu}/></div>
+          {showMenu && (
+            <div className="flex flex-col gap-4 pl-4 text-gray-400 cursor-pointer">
+              <Link to={"/clothings/men"}  onClick={() => setMobile(false)} className=''><div className='hover:text-black'>Men's Wear</div></Link>
+              <Link to={"/clothings/female"}  onClick={() => setMobile(false)} className=''><div className='hover:text-black'>Female's Wear</div></Link>
+              <Link to={"/clothings/formal"}  onClick={() => setMobile(false)} className=''><div className='hover:text-black'>Formal's Wear</div></Link>
+          </div>
+          )}
+          
+          
+        </li>{/* </Link>  */}
         <Link to={"/interiors"} onClick={() => setMobile(false)}><li>Homes/Interior</li></Link> 
         <Link to={"/bespoke"} onClick={() => setMobile(false)}><li>Bespoke</li></Link>
         <Link to={"/contact"} onClick={() => setMobile(false)}><li>Contact us</li></Link>
-        </ul>
-            
-    
+
         <Link
           to="signup"
           onClick={() => setMobile(false)}
-          className="block"
+          className=""
         >
           <div className="w-full bg-[#E6B566] text-white py-2 text-center rounded-[8px]">
             Sign up
           </div>
         </Link>
+
+        </ul>
+        
         {/* <Link to={"/signup"} onClick={() => setMobile(false)} className=''><div className='w-full bg-[#E6B566] text-white py-2 text-center rounded-[8px]'>Sign up</div></Link> */}
           </div>
         </div>

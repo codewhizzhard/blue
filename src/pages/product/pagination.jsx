@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import bespoke from "../../assets/bespoke.png";
 import { FiShoppingCart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { useAddToCartMutation } from '../../services/blueBreedApi';
 const PaginationPage = ({items, locate}) => {
+
+  const [addToCart, {isLoading, error}] = useAddToCartMutation();
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -24,6 +27,18 @@ const PaginationPage = ({items, locate}) => {
 
   console.log("page", locate);
 
+  const handleCart = async (id) => {
+    console.log("carting")
+    try {
+      const result = await addToCart({productId: "1", size: "2", quantity: 1, color: "red"}).unwrap()
+      console.log("cartResult", result);
+      console.log("err",error)
+
+    } catch (err) {
+      console.log("handleCartError", err)
+    }
+
+  }
   return (
     <div className='space-y-10'>
    {/*  <ul className="flex flex-wrap gap-y-8 justify-between">
@@ -57,7 +72,7 @@ const PaginationPage = ({items, locate}) => {
               <img src={bespoke} alt="" className='w-full object-cover rounded h-full'/>
                 <span className='font-medium text-black text-[16px]'>{item.name}</span>
                 <span className='font-medium text-black text-[16px]'>{item.price}</span>
-               <span className='absolute bg-white right-2 top-2 rounded-4xl p-2'><FiShoppingCart  size={13} /></span>
+               <span className='absolute bg-white right-2 top-2 rounded-4xl p-2'><FiShoppingCart  size={13} onClick={() => handleCart(item.id)} className='cursor-pointer'/></span>
               </li>
             </Link>
           ))

@@ -29,7 +29,7 @@ const Login = () => {
             navigate('/clothings');
           }
         } catch (err) {
-          console.log("login err", err?.data?.message);
+          console.log("login err", err?.data);
         } finally {
           console.log("logs", isLoading)
         }
@@ -68,7 +68,7 @@ const Login = () => {
             <button type="submit" className={`w-full bg-[#E6B566] py-2 rounded text-white ${isLoading && "bg-gray-600"}`} disabled={isLoading}>
                 {isLoading ? "Loading" : "Next"}
           </button>
-          {error?.data.message && <p className='text-red-500'>{error?.data.message}!</p>}
+          {error?.data?.message && <p className='text-red-500'>{error?.data?.message}!</p>}
       </form>
       <div className='flex items-center gap-4'>
             <hr className='flex-grow'/>

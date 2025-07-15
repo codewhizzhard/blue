@@ -163,18 +163,20 @@ const LandingPage = () => {
                 <hr className='md:flex-grow'/>
             </span>
             <div className='flex md:flex-row gap-4 md:justify-center items-center overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-align-none px-10'>
-                <div className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center'>
+                <Link className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center' to={"/clothings/men"}>
+                    
                     <img src={fswag} alt="" className='h-[460px] object-cover rounded-2xl w-full'/>
-                    <span>Sport Wear</span>
-                </div>
-                <div className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center md:snap-align-none'>
+                    <span>Men's Wear</span>
+                    
+                </Link>
+                <Link className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center md:snap-align-none' to={"/clothings/female"}>
                     <img src={fcop} alt="" className='h-[460px] object-cover rounded-2xl w-full'/>
-                    <span>Casual Wear</span>
-                </div>
-                <div className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center'>
+                    <span>Female Wear</span>
+                </Link>
+                <Link className='flex flex-col items-center gap-4 w-[80%] flex-shrink-0 md:w-[32.5%] snap-center' to={"/clothings/formal"}>
                     <img src={fsit} alt="" className='h-[460px] object-cover rounded-2xl w-full'/>
                     <span>Formal Wear</span>
-                </div>
+                </Link>
             </div>
         </div>
 
@@ -235,7 +237,7 @@ const LandingPage = () => {
                 </div>
                 <div className='md:w-[25%] w-[88%] md:rounded-[24px] bg-black h-fit py-5 md:pt-20 h-fit absolute md:static top-120 left-10 right-2 text-white px-6 space-y-8 py-4 md:flex-end md:pb-6 md:flex md:flex-col'>
                     <p className='text-[28px] font-semibold break-words'>Crafted Beautiful Spaces To Inspire Your Next Home Transformation</p>
-                    <button className='px-7 py-3 bg-[#E6B566] text-[18px] font-bold rounded-[40px]'>Shop Collection</button>
+                    <Link className='px-7 py-3 bg-[#E6B566] text-[18px] font-bold rounded-[40px]' to={"/interiors"}>Shop Collection</Link>
                 </div>
             </div>
             
@@ -246,7 +248,7 @@ const LandingPage = () => {
             <div className='space-y-5 text-center md:text-start md:w-[40%]'>
                 <h2 className='font-semibold text-4xl'>100+ Stunning Home Designs</h2>
                 <p>Our interior designers have crafted beautiful spaces to inspire your next home transformation</p>
-                <button className='bg-[#E6B566] py-2 px-6'>Explore More</button>
+                <Link  className='bg-[#E6B566] py-2 px-6' to={"/interiors"}>Explore More</Link>
             </div>
 
             <div className='h-[410px] md:w-[70%] w-[100%]'>

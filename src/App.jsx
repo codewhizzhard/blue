@@ -11,6 +11,7 @@ import Bespoke from "./pages/product/bespoke";
 import Contact from "./pages/contact";
 import ProductDetail from "./pages/product/productDetail";
 import Cart from "./pages/product/cart";
+import CashOut from "./pages/product/cashOut";
 
 
 function App() {
@@ -23,24 +24,23 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-            {/* protected Route */}
-          <Route element={<ProtectedRoute />}>
-            <Route path="/clothings" element={<Clothings />}/>
-            <Route path="/clothings/:id" element={<ProductDetail />}/>
+            <Route path="/clothings/:category" element={<Clothings />}/>
+            <Route path="/clothings/:category/:id" element={<ProductDetail />}/>
             {/*  */}
             <Route path="/interiors" element={<Interiors />} />
-            <Route path="/interiors/:id" element={<ProductDetail />} />
+            <Route path="/interiors/:id" element={<ProductDetail />} /> 
             {/*  */}
             <Route path="/bespoke" element={<Bespoke />} />
             <Route path="/cart" element={<Cart />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/cashout" element={<CashOut />} />
+            </Route>
             <Route path="/contact" element={<Contact />} />
-          </Route>
-          {/* end of potected route*/}
           </Route>
         </Routes>
       </BrowserRouter>
     </>
   )
 }
-
+/*     //////<Route element={<ProtectedRoute />}> */   ////</Route>
 export default App

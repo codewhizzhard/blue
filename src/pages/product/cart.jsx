@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaChevronRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
   return (
@@ -46,7 +47,7 @@ const Cart = () => {
     <span>523.40</span>
   </div>
   <p className='text-[18px] text-[#202020]'>The total amount you pay includes all applicable customs duties & taxes. We guarantee no additional charges on delivery</p>
-  <button className='text-white py-3 px-18 text-[18px] font-bold bg-[#E6B566]'>Next</button>
+  <Link to={"/cashout"}  className='text-white py-3 px-18 text-[18px] font-bold bg-[#E6B566]' >Next</Link>
 </div>
   </div>
   

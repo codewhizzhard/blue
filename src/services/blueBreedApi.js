@@ -6,6 +6,13 @@ export const blueBreedApi = createApi({
     reducerPath: "blueBreedApi",
     baseQuery: fetchBaseQuery({
         baseUrl: API,
+        prepareHeaders: (headers) => {
+            const token = localStorage.getItem("token")
+            if (token) {
+                headers.set("Authorization", `Bearer ${token}`)
+            }
+            return headers;
+        }
     }),
     endpoints: (builder) => ({
         login: builder.mutation({
@@ -22,7 +29,13 @@ export const blueBreedApi = createApi({
                 body: credentials,
             }),
         }),
-        
+        addToCart: builder.mutation({
+            query: (credentials) => ({
+                url: "/user/cart/add",
+                method: "POST",
+                body: credentials,
+            }),
+        })
 
         /* getPost: builder.query({query: () => "comments"}),
         getPosts: builder.query({query: (id) => `post/${id}`}),
@@ -37,4 +50,4 @@ export const blueBreedApi = createApi({
     })
 })
 
-export const {useLoginMutation, useSigninMutation } = blueBreedApi;
+export const {useLoginMutation, useSigninMutation, useAddToCartMutation } = blueBreedApi;
