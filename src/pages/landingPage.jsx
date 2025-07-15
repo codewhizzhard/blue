@@ -87,7 +87,7 @@ const LandingPage = () => {
   return (
     <section className='w-full min-h-screen bg-[#FDF8EF]'>
         <div className='w-full relative h-full'>
-           <img src={landed} alt="" srcSet="" className=' object-cover w-full h-[681px] md:h-[33rem]  bg-red-200' />{/*  */}
+           <img src={landed} alt="" srcSet="" className=' object-cover w-full h-[681px] md:h-[33rem] ' />{/*  */}
            <div className='absolute inset-0 flex justify-center flex-col text-white text-center gap-y-6 items-center px-2 md:px-10' style={{fontFamily: "'DM Sans',sans-serif"}}>
             <h2 className='font-semibold leading-[70px] text-6xl md:left-16 md:right-16'>Shop Fashion. Elevate Spaces. Customize with Elegance</h2>
             <p className='md:px-10 px-6'>Where Fashion Meets Interior Elegance – Shop, Style, and Personalize Your Space.</p>
