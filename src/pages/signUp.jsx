@@ -63,7 +63,7 @@ export const SignUp = () => {
             <button type="submit" className={`w-full bg-[#E6B566] py-2 rounded text-white ${isLoading && "bg-gray-950"}`} >
                 {isLoading ? "Loading" : "Next"}
             </button>
-        {error?.data.message && <p className='text-red-500'>{error?.data.message}!</p>}
+        {error?.data?.message && <p className='text-red-500'>{error?.data?.message}!</p>}
         </form>
         <div className='flex items-center gap-4'>
             <hr className='flex-grow'/>

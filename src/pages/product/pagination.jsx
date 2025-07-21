@@ -1,10 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import bespoke from "../../assets/bespoke.png";
 import { FiShoppingCart } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
-import { useAddToCartMutation } from '../../services/blueBreedApi';
+import { Link, useLocation } from 'react-router-dom';
+import { useAddToCartMutation, useGetProductsByCategoryQuery } from '../../services/blueBreedApi';
+
+
 const PaginationPage = ({items, locate}) => {
 
+
+ // console.log("loacate:", locate.split("/")[2]);
+  let categoryId /* = locate.split("/")[2]; */
+  useEffect(() => {
+    categoryId = locate.split("/")[2];
+  }, [])
+
+
+  const {data: productsData, error: productsError, isLoading: productLoading} = useGetProductsByCategoryQuery({categoryId});
+
+  console.log("data:", productsData)
+  console.log("dataLoad:", productLoading)
   const [addToCart, {isLoading, error}] = useAddToCartMutation();
 
   const [currentPage, setCurrentPage] = useState(1);

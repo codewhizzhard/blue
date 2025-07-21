@@ -5,6 +5,7 @@ import bespoke from "../../assets/bespoke.png"
 import { FaChevronRight, FaHeadset } from 'react-icons/fa'
 import { FiMail, FiShoppingCart } from 'react-icons/fi'
 import PaginationPage from './pagination'
+import { useGetSimilarProductsMutation } from '../../services/blueBreedApi'
 
 
 const ProductDetail = () => {
@@ -13,6 +14,9 @@ const ProductDetail = () => {
     const path = location.pathname.split("/")[1];
     let items = [];
     console.log("dd", typeof(id))
+
+    const {data: similarProducts, isLoading, error} = useGetSimilarProductsMutation("men")
+    console.log("daa:", similarProducts)
     //const [items, setItems] = useState([]);
     if (path === "clothings") {
      items = [
@@ -347,9 +351,11 @@ const ProductDetail = () => {
             </ul>  */}
                 <ul className='grid md:grid-cols-3 grid-cols-2 space-y-10 gap-4'>
                 {items.map((item, index) => (
-                     <Link to={`/${path}/${item.id}`}>
+                     <Link to={`/${path}/${item.id}`} key={index}>
                         <li className='w-fit shrink-0 flex flex-col h-[322px] gap-3 relative text-[#2E2E2E]' key={index}>
                         <img src={bespoke} alt="" className='w-full object-cover rounded h-full'/>
+                        <span className='font-medium text-black text-[16px]'>{item.name}</span>
+                        <span className='font-medium text-black text-[16px]'>{item.name}</span>
                         <span className='font-medium text-black text-[16px]'>{item.name}</span>
                         <span className='font-medium text-black text-[16px]'>{item.price}</span>
                     <span className='absolute bg-white right-2 top-2 rounded-4xl p-2'><FiShoppingCart size={13} /></span>
