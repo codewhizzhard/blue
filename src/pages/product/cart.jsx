@@ -9,10 +9,10 @@ const Cart = () => {
 
   const { data: cartData, isLoading, error } = useGetCartQuery();
   console.log("Cart Data:", cartData?.data?.cart.map((product, index) => (
-    console.log("ppp:", product?.productDtails)
+    product
   )));
-  console.log("Cart DataLoading:", isLoading);
-  console.log("Cart DataLoading:", error);
+  console.log("Cart DataLoading:", cartData?.data?.totalCat);
+  //console.log("Cart DataLoading:", error);
 
   //handleFetch();
   return (
@@ -40,28 +40,30 @@ const Cart = () => {
 </div> */}
 
 {/* font-bold */}
- { cartData?.data?.cart.map((product, index) => (
-  <>
-  <ul className="flex h-[76px] items-center  w-[1445px] xl:w-full px-8 gap-x-4 text-[18px] mt-10 pb-10" key={index}>
-    <li className='flex-2 flex gap-2'>
-      <div className='w-[105px] h-[120px] rounded-[12px]'></div>
-      <div className='flex flex-col gap-2 text-[#807D7E] font-medium text-[14px]'>
-        <p className='text-[#3C4242] font-bold text-[18px]'>{product?.productDtails?.color}</p>
-        <p>{product?.productDtails?.color}</p>
+  {isLoading && <p className='py-4 flex w-full justify-center'>Data Loading...</p>}
+  {!isLoading && cartData?.data?.totalCat === 0 && <p className='w-full py-4 flex justify-center text-red-500'>No product in your cart, go to the products page to shop with us</p>}
+  { cartData?.data?.cart.map((product, index) => (
+    <>
+    <ul className="flex h-[76px] items-center  w-[1445px] xl:w-full px-8 gap-x-4 text-[18px] mt-10 pb-10" key={index}>
+      <li className='flex-2 flex gap-2'>
+        <div className='w-[105px] h-[120px] rounded-[12px]'></div>
+        <div className='flex flex-col gap-2 text-[#807D7E] font-medium text-[14px]'>
+          <p className='text-[#3C4242] font-bold text-[18px]'>{product?.productDtails?.color}</p>
+          <p>{product?.productDtails?.color}</p>
         <p>{product?.productDtails?.size}</p>
       </div>
-    </li>
-    <li className="flex-1 text-[#3C4242] text-[18px] font-semibold">{product?.productDtails?.size}</li>
-    <li className="flex-1 text-[#3C4242] text-[18px] font-semibold"> <div className='bg-[#F6F6F6] rounded-[12px] w-[100px] flex justify-center gap-2 py-1 cursor-pointer'><span>-</span> {product?.productDtails?.quantity} <span>+</span></div></li>
-    <li className="flex-1 text-[#BEBCBD] text-[18px] font-bold">{product?.productDtails?.size}</li>
-    <li className="flex-1 text-[#3C4242] text-[18px] font-semibold">{product?.productDtails?.size}</li>
-    <li className='flex-1'><FiDelete /></li>
-   
-    </ul>
-     <hr className='text-[#BEBCBD] mx-8' />
-  </>
- ))}
-  
+      </li>
+      <li className="flex-1 text-[#3C4242] text-[18px] font-semibold">{product?.productDtails?.size}</li>
+      <li className="flex-1 text-[#3C4242] text-[18px] font-semibold"> <div className='bg-[#F6F6F6] rounded-[12px] w-[100px] flex justify-center gap-2 py-1 cursor-pointer'><span>-</span> {product?.productDtails?.quantity} <span>+</span></div></li>
+      <li className="flex-1 text-[#BEBCBD] text-[18px] font-bold">{product?.productDtails?.size}</li>
+      <li className="flex-1 text-[#3C4242] text-[18px] font-semibold">{product?.productDtails?.size}</li>
+      <li className='flex-1'><FiDelete /></li>
+    
+      </ul>
+      <hr className='text-[#BEBCBD] mx-8' />
+    </>
+  ))}
+    
 {/*   <span className="flex-1">1 PRODUCT DETAILS</span>
   <span className="flex-1">1</span>
   <span className="flex-1">2 PRODUCT DETA ILSPOD UC T DETAILS</span>

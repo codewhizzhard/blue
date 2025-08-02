@@ -5,6 +5,7 @@ const token = localStorage.getItem("token");
 const initialState = {
    
     token: token || null,
+    selectedProduct: null
 }
 
 const authSlice = createSlice({
@@ -27,10 +28,13 @@ const authSlice = createSlice({
             //Remove from localStorage
 
              localStorage.removeItem("token");
-        }
+        },
+         setSelectedProduct: (state, action) => {
+            state.selectedProduct = action.payload;
+        },
     }
 })
 
-export const { setCredentials, logout } = authSlice.actions;
+export const { setCredentials, logout, setSelectedProduct } = authSlice.actions;
 
 export default authSlice.reducer;

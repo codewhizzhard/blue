@@ -52,8 +52,11 @@ export const blueBreedApi = createApi({
                 body: credentials
             })
         }),
-        getSimilarProducts: builder.mutation({
+        getSimilarProducts: builder.query({
             query: ({productId}) => `/product/similar?productId=${productId}`
+        }),
+        getProductsByCategoryName: builder.query({
+            query: ({categoryName}) => `/product/bycategory/all?categoryName=${categoryName}`
         })
         
 
@@ -70,4 +73,4 @@ export const blueBreedApi = createApi({
     })
 })
 
-export const {useLoginMutation, useSigninMutation, useAddToCartMutation, useGetCartQuery, useGetProductsByCategoryQuery, useOrderMutation, useGetSimilarProductsMutation } = blueBreedApi;
+export const {useLoginMutation, useSigninMutation, useAddToCartMutation, useGetCartQuery, useGetProductsByCategoryQuery, useOrderMutation, useGetSimilarProductsQuery, useGetProductsByCategoryNameQuery } = blueBreedApi;
