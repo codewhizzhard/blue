@@ -9,7 +9,9 @@ const Navbar = () => {
 
   const [search, setSearch] = useState("");
   const [mobile, setMobile] = useState(false);
+  const [web, setWeb] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [webDropdown, setWebDropdown] = useState(false)
 
   const handleShowMenu = () => {
     setShowMenu((prev) => !prev)
@@ -29,7 +31,14 @@ const Navbar = () => {
 
   {/* Navigation links */}
   <ul className='flex gap-8 text-[16px] font-semibold lg:pl-10 lg:gap-12 text-[#4A4A4A]'>
-    <Link to={"/clothings"}><li>Clothings</li></Link> 
+    <div  onClick={() => setWebDropdown((prev) => !prev)} className='relative cursor-pointer'><li>Clothings</li> 
+     {webDropdown && 
+      <div className='absolute w-[230px] h-[214px]  bg-black/90 rounded-[12px] flex flex-col gap-12 py-6 top-14  pl-6 text-[15px] font-semibold text-white'>
+       <Link to={"/clothings/men"} className='' >Men's Wear</Link>
+        <Link to={"/clothings/female"} className='' >Female's Wear</Link>
+        <Link to={"/clothings/formal"} className='' >Formal's Wear</Link>
+      </div> }
+    </div> 
     <Link to={"/interiors"}><li>Homes/Interior</li></Link> 
     <Link to={"/bespoke"}><li>Bespoke</li></Link>
     <Link to={"/contact"}><li>Contact us</li></Link>
