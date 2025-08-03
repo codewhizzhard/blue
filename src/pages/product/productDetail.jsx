@@ -56,9 +56,9 @@ const ProductDetail = () => {
         <div className='flex flex-col md:flex-row justify-between'>
 
             <div className='flex w-full'>
-                <div className='w-[30%] h-full items-center flex justify-end pr-5'>
+                <div className='w-[30%] flex flex-col justify-center items-end pr-5 '>
                   {item.information?.images.map((image, index) => (
-                    <div className='w-[68px] h-[68px] rounded-[9px]'>
+                    <div className='w-[68px] h-[68px] rounded-[9px]' key={index}>
                     <img src={image} alt="img" />
                     </div>
                   ))}
